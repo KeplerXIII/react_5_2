@@ -1,19 +1,35 @@
 import './App.css'
 
 function App() {
-  const SearchForm = () => {
-    return <form></form>
+
+  type YaProps = {
+    type: string,
+    text: string,
+    name: string,
+    href: string,
+    imgSource: string,
+    alt: string
+    children: React.ReactNode
   }
 
-  const Button = ({ type, text }) => {
-    return <button>{text}</button>
+  const SearchForm: React.FC<Pick<YaProps, 'children'>> = ({ children }) => {
+    return (
+      <>
+        {children}
+        <form></form>
+      </>
+    )
   }
 
-  const Link = ({ href, name }) => {
+  const Button: React.FC<Pick<YaProps, 'type' | 'text'>> = ({ type, text }) => {
+    return <button>{text + type}</button>
+  }
+
+  const Link: React.FC<Pick<YaProps, 'href' | 'name'>> = ({ href, name }) => {
     return <a href={href}>{name}</a>
   }
 
-  const Image = ({ href, imgSource, alt }) => {
+  const Image: React.FC<Pick<YaProps, 'href' | 'imgSource' | 'alt'>> = ({ href, imgSource, alt }) => {
     return (
       <a href={href}>
         <img src={imgSource} alt={alt} />
@@ -65,9 +81,9 @@ function App() {
           <Link href='...' name='Новости' />
         </div>
         <SearchForm>
-          <Image href='...' imgSource='...' alt='клавиатура' />
-          <Button type='Accept' text='Найти' />
-          <Link href='...' name='Найдется всё' />
+            <Image href='...' imgSource='...' alt='клавиатура' />
+            <Button type='Accept' text='Найти' />
+            <Link href='...' name='Найдется всё' />
         </SearchForm>
       </div>
 
