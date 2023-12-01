@@ -59,6 +59,7 @@ function App() {
           <Link href='...' name='Новости' />
         </div>
         <SearchForm>
+          <Image href='...' imgSource='...' alt='клавиатура' />
           <Button type='Accept' text='Найти' />
           <Link href='...' name='Найдется всё' />
         </SearchForm>
