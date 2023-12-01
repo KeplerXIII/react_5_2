@@ -30,10 +30,10 @@ function App() {
     <>
 
       <div className='raw top-chart'>
-          <Link href='...' name='Сейчас в сми' />
-          <Link href='...' name='В Германии' />
-          <Link href='...' name='Рекомендуем' />
-          <TimeWidget/>
+        <Link href='...' name='Сейчас в сми' />
+        <Link href='...' name='В Германии' />
+        <Link href='...' name='Рекомендуем' />
+        <TimeWidget />
       </div>
 
       <div className='news-block'>
@@ -49,6 +49,12 @@ function App() {
           <Image href='ria.ru' imgSource='...' alt='Иконка РИА новости' />
           <Link href='...' name='Путин Путин Путин' />
         </div>
+      </div>
+
+      <div className='adv'>
+        <Image href='classroom.ru' imgSource='...' alt='Иконка классной доски' />
+        <Link href='...' name='Работа над ошибками' />
+        <Link href='...' name='Смотрите на Яндекс и запоминайте' />
       </div>
 
       <div className='search-block'>
